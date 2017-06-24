@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		200274AB1EFD8716009EFF92 /* Poof.sks in Resources */ = {isa = PBXBuildFile; fileRef = 200274AA1EFD8716009EFF92 /* Poof.sks */; };
+		200274AD1EFD8C13009EFF92 /* sfx_seal.caf in Resources */ = {isa = PBXBuildFile; fileRef = 200274AC1EFD8BC1009EFF92 /* sfx_seal.caf */; };
+		202AF5461EF9E46700668906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AF5451EF9E46700668906 /* AppDelegate.swift */; };
+		202AF5481EF9E46700668906 /* Level_1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 202AF5471EF9E46700668906 /* Level_1.sks */; };
+		202AF54A1EF9E46700668906 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 202AF5491EF9E46700668906 /* Actions.sks */; };
+		202AF54C1EF9E46700668906 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AF54B1EF9E46700668906 /* GameScene.swift */; };
+		202AF54E1EF9E46700668906 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AF54D1EF9E46700668906 /* GameViewController.swift */; };
+		202AF5511EF9E46700668906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202AF54F1EF9E46700668906 /* Main.storyboard */; };
+		202AF5531EF9E46700668906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202AF5521EF9E46700668906 /* Assets.xcassets */; };
+		202AF5561EF9E46700668906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202AF5541EF9E46700668906 /* LaunchScreen.storyboard */; };
+		202AF55E1EF9E48A00668906 /* assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 202AF55D1EF9E48A00668906 /* assets.atlas */; };
+		202AF5601EF9E4B700668906 /* Bear.sks in Resources */ = {isa = PBXBuildFile; fileRef = 202AF55F1EF9E4B700668906 /* Bear.sks */; };
+		202AF5621EF9E53200668906 /* CharacterActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 202AF5611EF9E53200668906 /* CharacterActions.sks */; };
+		202AF5641EF9E57D00668906 /* Penguin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AF5631EF9E57D00668906 /* Penguin.swift */; };
+		202AF5661EF9E5B500668906 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 202AF5651EF9E5B500668906 /* MainMenu.sks */; };
+		202AF5681EF9E5FB00668906 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AF5671EF9E5FB00668906 /* MSButtonNode.swift */; };
+		202AF56A1EF9E65D00668906 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AF5691EF9E65D00668906 /* MainMenu.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		200274AA1EFD8716009EFF92 /* Poof.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Poof.sks; sourceTree = "<group>"; };
+		200274AC1EFD8BC1009EFF92 /* sfx_seal.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_seal.caf; sourceTree = "<group>"; };
+		202AF5421EF9E46700668906 /* PeevedPenguins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeevedPenguins.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		202AF5451EF9E46700668906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		202AF5471EF9E46700668906 /* Level_1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level_1.sks; sourceTree = "<group>"; };
+		202AF5491EF9E46700668906 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		202AF54B1EF9E46700668906 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		202AF54D1EF9E46700668906 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		202AF5501EF9E46700668906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		202AF5521EF9E46700668906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		202AF5551EF9E46700668906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		202AF5571EF9E46700668906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		202AF55D1EF9E48A00668906 /* assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = assets.atlas; sourceTree = "<group>"; };
+		202AF55F1EF9E4B700668906 /* Bear.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bear.sks; sourceTree = "<group>"; };
+		202AF5611EF9E53200668906 /* CharacterActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CharacterActions.sks; sourceTree = "<group>"; };
+		202AF5631EF9E57D00668906 /* Penguin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Penguin.swift; sourceTree = "<group>"; };
+		202AF5651EF9E5B500668906 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
+		202AF5671EF9E5FB00668906 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		202AF5691EF9E65D00668906 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		202AF53F1EF9E46700668906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		202AF5391EF9E46700668906 = {
+			isa = PBXGroup;
+			children = (
+				202AF5611EF9E53200668906 /* CharacterActions.sks */,
+				202AF5441EF9E46700668906 /* PeevedPenguins */,
+				202AF5431EF9E46700668906 /* Products */,
+				202AF55D1EF9E48A00668906 /* assets.atlas */,
+			);
+			sourceTree = "<group>";
+		};
+		202AF5431EF9E46700668906 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				202AF5421EF9E46700668906 /* PeevedPenguins.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		202AF5441EF9E46700668906 /* PeevedPenguins */ = {
+			isa = PBXGroup;
+			children = (
+				202AF5451EF9E46700668906 /* AppDelegate.swift */,
+				202AF5471EF9E46700668906 /* Level_1.sks */,
+				202AF5491EF9E46700668906 /* Actions.sks */,
+				202AF55F1EF9E4B700668906 /* Bear.sks */,
+				202AF5631EF9E57D00668906 /* Penguin.swift */,
+				202AF5651EF9E5B500668906 /* MainMenu.sks */,
+				202AF5691EF9E65D00668906 /* MainMenu.swift */,
+				202AF54B1EF9E46700668906 /* GameScene.swift */,
+				200274AA1EFD8716009EFF92 /* Poof.sks */,
+				202AF54D1EF9E46700668906 /* GameViewController.swift */,
+				202AF54F1EF9E46700668906 /* Main.storyboard */,
+				202AF5521EF9E46700668906 /* Assets.xcassets */,
+				200274AC1EFD8BC1009EFF92 /* sfx_seal.caf */,
+				202AF5541EF9E46700668906 /* LaunchScreen.storyboard */,
+				202AF5671EF9E5FB00668906 /* MSButtonNode.swift */,
+				202AF5571EF9E46700668906 /* Info.plist */,
+			);
+			path = PeevedPenguins;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		202AF5411EF9E46700668906 /* PeevedPenguins */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 202AF55A1EF9E46700668906 /* Build configuration list for PBXNativeTarget "PeevedPenguins" */;
+			buildPhases = (
+				202AF53E1EF9E46700668906 /* Sources */,
+				202AF53F1EF9E46700668906 /* Frameworks */,
+				202AF5401EF9E46700668906 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PeevedPenguins;
+			productName = PeevedPenguins;
+			productReference = 202AF5421EF9E46700668906 /* PeevedPenguins.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		202AF53A1EF9E46700668906 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "yo hanashima";
+				TargetAttributes = {
+					202AF5411EF9E46700668906 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = T2HM3LUVY9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 202AF53D1EF9E46700668906 /* Build configuration list for PBXProject "PeevedPenguins" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 202AF5391EF9E46700668906;
+			productRefGroup = 202AF5431EF9E46700668906 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				202AF5411EF9E46700668906 /* PeevedPenguins */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		202AF5401EF9E46700668906 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202AF5601EF9E4B700668906 /* Bear.sks in Resources */,
+				202AF5661EF9E5B500668906 /* MainMenu.sks in Resources */,
+				202AF5621EF9E53200668906 /* CharacterActions.sks in Resources */,
+				200274AB1EFD8716009EFF92 /* Poof.sks in Resources */,
+				202AF5511EF9E46700668906 /* Main.storyboard in Resources */,
+				202AF5481EF9E46700668906 /* Level_1.sks in Resources */,
+				200274AD1EFD8C13009EFF92 /* sfx_seal.caf in Resources */,
+				202AF55E1EF9E48A00668906 /* assets.atlas in Resources */,
+				202AF5531EF9E46700668906 /* Assets.xcassets in Resources */,
+				202AF5561EF9E46700668906 /* LaunchScreen.storyboard in Resources */,
+				202AF54A1EF9E46700668906 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		202AF53E1EF9E46700668906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202AF54C1EF9E46700668906 /* GameScene.swift in Sources */,
+				202AF56A1EF9E65D00668906 /* MainMenu.swift in Sources */,
+				202AF54E1EF9E46700668906 /* GameViewController.swift in Sources */,
+				202AF5641EF9E57D00668906 /* Penguin.swift in Sources */,
+				202AF5461EF9E46700668906 /* AppDelegate.swift in Sources */,
+				202AF5681EF9E5FB00668906 /* MSButtonNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		202AF54F1EF9E46700668906 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				202AF5501EF9E46700668906 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		202AF5541EF9E46700668906 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				202AF5551EF9E46700668906 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		202AF5581EF9E46700668906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		202AF5591EF9E46700668906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		202AF55B1EF9E46700668906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T2HM3LUVY9;
+				INFOPLIST_FILE = PeevedPenguins/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.PeevedPenguins;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		202AF55C1EF9E46700668906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T2HM3LUVY9;
+				INFOPLIST_FILE = PeevedPenguins/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.PeevedPenguins;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		202AF53D1EF9E46700668906 /* Build configuration list for PBXProject "PeevedPenguins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				202AF5581EF9E46700668906 /* Debug */,
+				202AF5591EF9E46700668906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		202AF55A1EF9E46700668906 /* Build configuration list for PBXNativeTarget "PeevedPenguins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				202AF55B1EF9E46700668906 /* Debug */,
+				202AF55C1EF9E46700668906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 202AF53A1EF9E46700668906 /* Project object */;
+}
