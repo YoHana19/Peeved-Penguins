@@ -43,6 +43,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /* reset button */
     var buttonRestart: MSButtonNode!
     
+    /* score label */
+    var scoreLabel: SKLabelNode!
+    var score: Int = 0
+    
     /* penguin life = 3 */
     var life: Int = 3
     var penguinLife1: SKSpriteNode!
@@ -55,6 +59,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         catapult = childNode(withName: "catapult") as! SKSpriteNode
         cantileverNode = childNode(withName: "cantileverNode") as! SKSpriteNode
         touchNode = childNode(withName: "touchNode") as! SKSpriteNode
+        
+        /* Set scoreLabel */
+        scoreLabel = childNode(withName: "scoreLabel") as! SKLabelNode
         
         /* Set penguin life node */
         penguinLife1 = childNode(withName: "penguinLife1") as! SKSpriteNode
@@ -193,6 +200,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let sealDeath = SKAction.run({
             /* Remove seal node from scene */
             node.removeFromParent()
+            
+            /* update scores */
+            self.score+=1
+            self.scoreLabel.text = String(self.score)
         })
         self.run(sealDeath)
         
