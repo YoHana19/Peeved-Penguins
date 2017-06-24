@@ -40,7 +40,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /* Add an optional camera target */
     var cameraTarget: SKSpriteNode?
     
+    /* reset button */
     var buttonRestart: MSButtonNode!
+    
+    /* penguin life = 3 */
+    var life: Int = 3
+    var penguinLife1: SKSpriteNode!
+    var penguinLife2: SKSpriteNode!
+    var penguinLife3: SKSpriteNode!
     
     override func didMove(to view: SKView) {
         /* Set reference to catapultArm node */
@@ -48,6 +55,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         catapult = childNode(withName: "catapult") as! SKSpriteNode
         cantileverNode = childNode(withName: "cantileverNode") as! SKSpriteNode
         touchNode = childNode(withName: "touchNode") as! SKSpriteNode
+        
+        /* Set penguin life node */
+        penguinLife1 = childNode(withName: "penguinLife1") as! SKSpriteNode
+        penguinLife2 = childNode(withName: "penguinLife2") as! SKSpriteNode
+        penguinLife3 = childNode(withName: "penguinLife3") as! SKSpriteNode
         
         /* Create a new Camera */
         cameraNode = childNode(withName: "cameraNode") as! SKCameraNode
@@ -82,16 +94,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             touchJoint = SKPhysicsJointSpring.joint(withBodyA: touchNode.physicsBody!, bodyB: catapultArm.physicsBody!, anchorA: location, anchorB: location)
             physicsWorld.add(touchJoint!)
             
-            let penguin = Penguin()
-            addChild(penguin)
-            penguin.position.x += catapultArm.position.x + 20
-            penguin.position.y += catapultArm.position.y + 50
-            penguin.physicsBody?.usesPreciseCollisionDetection = true
-            penguinJoint = SKPhysicsJointPin.joint(withBodyA: catapultArm.physicsBody!,
+            if life > 0 {
+                let penguin = Penguin()
+                addChild(penguin)
+                penguin.position.x += catapultArm.position.x + 20
+                penguin.position.y += catapultArm.position.y + 50
+                penguin.physicsBody?.usesPreciseCollisionDetection = true
+                penguinJoint = SKPhysicsJointPin.joint(withBodyA: catapultArm.physicsBody!,
                                                    bodyB: penguin.physicsBody!,
                                                    anchor: penguin.position)
-            physicsWorld.add(penguinJoint!)
-            cameraTarget = penguin
+                physicsWorld.add(penguinJoint!)
+                cameraTarget = penguin
+                
+                switch life {
+                case 1:
+                    penguinLife1.removeFromParent()
+                    break;
+                case 2:
+                    penguinLife2.removeFromParent()
+                    break;
+                case 3:
+                    penguinLife3.removeFromParent()
+                    break;
+                default:
+                    break;
+                }
+                
+                life-=1
+            }
         }
     }
     
