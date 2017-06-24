@@ -114,8 +114,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         guard let penguin = cameraTarget else {
             return
         }
+        
+        // Make sure not to generate a force by touching off except "catapultArm"
+        let touch = touches.first!
+        let location = touch.location(in: self)
+        let nodeAtpoint = atPoint(location)
+        guard nodeAtpoint.name == "touchNode" else { return }
+        
         // Generate a vector and a force based on the angle of the arm.
-        let force: CGFloat = 350
+        let force: CGFloat = 300
         let r = catapultArm.zRotation
         let dx = cos(r) * force
         let dy = sin(r) * force
@@ -127,7 +134,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(_ currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         moveCamera()
-        
         checkPenguin()
     }
     
@@ -211,7 +217,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         /* Check penguin has come to rest */
-        if cameraTarget.physicsBody!.joints.count == 0 && cameraTarget.physicsBody!.velocity.length() < 0.18 {
+        if cameraTarget.physicsBody!.joints.count == 0 && cameraTarget.physicsBody!.velocity.length() < 1.00 {
             resetCamera()
         }
         
