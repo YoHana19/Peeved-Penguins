@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		200274AB1EFD8716009EFF92 /* Poof.sks in Resources */ = {isa = PBXBuildFile; fileRef = 200274AA1EFD8716009EFF92 /* Poof.sks */; };
 		200274AD1EFD8C13009EFF92 /* sfx_seal.caf in Resources */ = {isa = PBXBuildFile; fileRef = 200274AC1EFD8BC1009EFF92 /* sfx_seal.caf */; };
+		20035B771EFF0FAD0044F7DE /* Level_2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 20035B761EFF0FAD0044F7DE /* Level_2.sks */; };
 		202AF5461EF9E46700668906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AF5451EF9E46700668906 /* AppDelegate.swift */; };
 		202AF5481EF9E46700668906 /* Level_1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 202AF5471EF9E46700668906 /* Level_1.sks */; };
 		202AF54A1EF9E46700668906 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 202AF5491EF9E46700668906 /* Actions.sks */; };
@@ -24,11 +25,13 @@
 		202AF5661EF9E5B500668906 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 202AF5651EF9E5B500668906 /* MainMenu.sks */; };
 		202AF5681EF9E5FB00668906 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AF5671EF9E5FB00668906 /* MSButtonNode.swift */; };
 		202AF56A1EF9E65D00668906 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AF5691EF9E65D00668906 /* MainMenu.swift */; };
+		20E455861F016FD2004F8999 /* Level_3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 20E455851F016FD1004F8999 /* Level_3.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		200274AA1EFD8716009EFF92 /* Poof.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Poof.sks; sourceTree = "<group>"; };
 		200274AC1EFD8BC1009EFF92 /* sfx_seal.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_seal.caf; sourceTree = "<group>"; };
+		20035B761EFF0FAD0044F7DE /* Level_2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level_2.sks; sourceTree = "<group>"; };
 		202AF5421EF9E46700668906 /* PeevedPenguins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeevedPenguins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		202AF5451EF9E46700668906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		202AF5471EF9E46700668906 /* Level_1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level_1.sks; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		202AF5651EF9E5B500668906 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		202AF5671EF9E5FB00668906 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
 		202AF5691EF9E65D00668906 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		20E455851F016FD1004F8999 /* Level_3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level_3.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			children = (
 				202AF5451EF9E46700668906 /* AppDelegate.swift */,
 				202AF5471EF9E46700668906 /* Level_1.sks */,
+				20035B761EFF0FAD0044F7DE /* Level_2.sks */,
+				20E455851F016FD1004F8999 /* Level_3.sks */,
 				202AF5491EF9E46700668906 /* Actions.sks */,
 				202AF55F1EF9E4B700668906 /* Bear.sks */,
 				202AF5631EF9E57D00668906 /* Penguin.swift */,
@@ -163,6 +169,7 @@
 				202AF5601EF9E4B700668906 /* Bear.sks in Resources */,
 				202AF5661EF9E5B500668906 /* MainMenu.sks in Resources */,
 				202AF5621EF9E53200668906 /* CharacterActions.sks in Resources */,
+				20035B771EFF0FAD0044F7DE /* Level_2.sks in Resources */,
 				200274AB1EFD8716009EFF92 /* Poof.sks in Resources */,
 				202AF5511EF9E46700668906 /* Main.storyboard in Resources */,
 				202AF5481EF9E46700668906 /* Level_1.sks in Resources */,
@@ -171,6 +178,7 @@
 				202AF5531EF9E46700668906 /* Assets.xcassets in Resources */,
 				202AF5561EF9E46700668906 /* LaunchScreen.storyboard in Resources */,
 				202AF54A1EF9E46700668906 /* Actions.sks in Resources */,
+				20E455861F016FD2004F8999 /* Level_3.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

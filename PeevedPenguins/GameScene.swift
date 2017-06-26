@@ -43,9 +43,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /* reset button */
     var buttonRestart: MSButtonNode!
     
+    /* main menu Button */
+    var buttonMainMenu: MSButtonNode!
+    
     /* score label */
     var scoreLabel: SKLabelNode!
     var score: Int = 0
+    
+    /* stage level */
+    var stageLevel: Int!
+    
+    /* the number of seals in each stage */
+    let numSealsArray: [Int] = [6, 5, 4]
+    
+    /* for counting seals */
+    var sealsArray = [String]()
     
     /* penguin life = 3 */
     var life: Int = 3
@@ -61,7 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         touchNode = childNode(withName: "touchNode") as! SKSpriteNode
         
         /* Set scoreLabel */
-        scoreLabel = childNode(withName: "scoreLabel") as! SKLabelNode
+        scoreLabel = childNode(withName: "//scoreLabel") as! SKLabelNode
         
         /* Set penguin life node */
         penguinLife1 = childNode(withName: "penguinLife1") as! SKSpriteNode
@@ -72,15 +84,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         cameraNode = childNode(withName: "cameraNode") as! SKCameraNode
         self.camera = cameraNode
         
+        /* buttons */
         buttonRestart = childNode(withName: "//buttonRestart") as! MSButtonNode
+        buttonMainMenu = childNode(withName: "//buttonMainMenu") as! MSButtonNode
         
         /* Reset the game when the reset button is tapped */
         buttonRestart.selectedHandler = {
-            guard let scene = GameScene.level(1) else {
+            guard let scene = GameScene.level(self.stageLevel) else {
                 print("Level 1 is missing?")
                 return
             }
-                
+            view.presentScene(scene)
+        }
+        
+        /* Move on to the main menu when the mainmenu button is tapped */
+        buttonMainMenu.selectedHandler = {
+            guard let scene = MainMenu(fileNamed: "MainMenu") else {
+                return
+            }
             scene.scaleMode = .aspectFit
             view.presentScene(scene)
         }
@@ -89,6 +110,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* Set physics contact delegate */
         physicsWorld.contactDelegate = self
+        
+        /* Set seals array for preventonn of duplicate count*/
+        let numseals = numSealsArray[stageLevel-1]
+        for i in 0..<numseals {
+            sealsArray += ["seal\(i)"]
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -172,6 +199,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called before each frame is rendered */
         moveCamera()
         checkPenguin()
+        
+        /* unlock stages */
+        unlockStage(stageLevel)
+        
+        /* check final stage */
+        if stageLevel < numSealsArray.count {
+            moveNextStage()
+        }
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -187,8 +222,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             /* Was the collision more than a gentle nudge? */
             if contact.collisionImpulse > 2.0 {
                 /* Kill Seal */
-                if contactA.categoryBitMask == 2 { removeSeal(node: nodeA) }
-                if contactB.categoryBitMask == 2 { removeSeal(node: nodeB) }
+                if contactA.categoryBitMask == 2 {
+                    if sealsArray.contains(nodeA.name!) {
+                        removeSeal(node: nodeA)
+                        sealsArray = sealsArray.filter {$0 != nodeA.name}
+                    }
+                }
+                if contactB.categoryBitMask == 2 {
+                    if sealsArray.contains(nodeB.name!) {
+                        removeSeal(node: nodeB)
+                        sealsArray = sealsArray.filter {$0 != nodeB.name}
+                    }
+                }
             }
         }
     }
@@ -196,17 +241,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func removeSeal(node: SKNode) {
         /* Seal death*/
         
+        // for debug
+//         print(node.name)
+        
         /* Create our hero death action */
         let sealDeath = SKAction.run({
             /* Remove seal node from scene */
             node.removeFromParent()
-            
-            /* update scores */
-            self.score+=1
-            self.scoreLabel.text = String(self.score)
         })
         self.run(sealDeath)
         
+        /* update scores */
+        self.score+=1
+        self.scoreLabel.text = String(self.score)
+            
         /* Load our particle effect */
         let particles = SKEmitterNode(fileNamed: "Poof")!
         /* Position particles at the Seal node
@@ -230,6 +278,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         guard let scene = GameScene(fileNamed: "Level_\(levelNumber)") else {
             return nil
         }
+        
+        /* Set stage level */
+        scene.stageLevel = levelNumber
+        
         scene.scaleMode = .aspectFit
         return scene
     }
@@ -288,4 +340,57 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         catapultSpringJoint.frequency = 6
         catapultSpringJoint.damping = 0.5
     }
+    
+    func unlockStage(_ level: Int) {
+        if numSealsArray[stageLevel-1] == score {
+            /* unlock buttonLevel */
+            switch level {
+            case 1:
+                MainMenu.flagLevel1 = true
+                break;
+            case 2:
+                MainMenu.flagLevel2 = true
+                break;
+            case 3:
+                MainMenu.flagLevel3 = true
+                break;
+            default:
+                break;
+            }
+            
+            /* for debug */
+            // print(MainMenu.flagLevel1)
+        }
+    }
+    
+    func moveNextStage() {
+        if numSealsArray[stageLevel-1] == score {
+            /* 1) Grab reference to our SpriteKit view */
+            guard let skView = self.view as SKView! else {
+                print("Could not get Skview")
+                return
+            }
+            
+            /* 2) Load Game scene */
+            guard let scene = GameScene.level(stageLevel+1) else {
+                print("Could not load GameScene with level 1")
+                return
+            }
+            
+            /* Set stage level */
+            scene.stageLevel = stageLevel+1
+            
+            /* 3) Ensure correct aspect mode */
+            scene.scaleMode = .aspectFit
+            
+            /* 4) Start game scene */
+            let waitMoveStage = SKAction.wait(forDuration: 4)
+            let presentScene = SKAction.run ({
+                skView.presentScene(scene)
+            })
+            let seqMoveStage = SKAction.sequence([waitMoveStage, presentScene])
+            self.run(seqMoveStage)
+        }
+    }
+    
 }
